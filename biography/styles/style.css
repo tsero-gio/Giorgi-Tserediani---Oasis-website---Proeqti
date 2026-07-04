@@ -147,7 +147,6 @@ header {
     font-family: 'Carter One' cursive, sans-serif;
 }
 
-/* Layout Container for Rows */
 .members-cards {
     display: flex;
     flex-direction: column;
@@ -285,7 +284,6 @@ summary {
     transform: translateY(-2px);
 }
 
-
 .arrow-icon {
     width: 20px;
     height: 20px;
@@ -365,7 +363,6 @@ details[open] .btn-text-less { display: inline; }
     letter-spacing: -0.01em;
 }
 
-/* Image Container and Zoom Effects matching .member-card styles */
 .bio-image-wrapper {
     width: 100%;
     overflow: hidden;
