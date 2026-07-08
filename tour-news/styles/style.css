@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0f12;
+    overflow-x: hidden;
+    position: relative; 
+    min-height: 100vh; 
+}
+
+body::before {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-image: url('/images/background-image.png'); 
+    background-position: top center;
+    background-size: 500px;
+    opacity: 0.10; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(10, 12, 15, 0.95); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 32px; 
+    width: auto;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 24px; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-list li a {
+    color: #cccccc; 
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #ffffff;
+}
+
+#active {
+    color: #ffffff !important; 
+    font-weight: 700;
+}
+
+.header-socials {
+    display: flex;
+    align-items: center;
+    gap: 16px; 
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain; 
+    filter: invert(89%) sepia(0%) saturate(113%) hue-rotate(136deg) brightness(87%) contrast(84%);
+    transition: filter 0.3s ease; 
+}
+
+.social-btn:hover .social-icon {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(248deg) brightness(100%) contrast(100%);
+}
+
+.banner {
+    background-image: 
+        linear-gradient(
+            to bottom, 
+            rgba(13, 15, 18, 1) 0%, 
+            rgba(13, 15, 18, 0) 20%, 
+            rgba(13, 15, 18, 0) 75%, 
+            rgba(13, 15, 18, 1) 100%
+        ), 
+        url('../images/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 606px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;
+}
+
+.horizontal-divider {
+    height: 1px;         
+    width: 100%;            
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+    margin-bottom: 30px;
+}
+
+.tours-container {
+    max-width: 1050px;
+    margin: 60px auto 20px auto;
+    padding: 0 20px;
+}
+
+.title-text {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    font-family: 'Carter One', sans-serif;
+}
+
+.tours-header {
+    margin-bottom: 40px;
+}
+
+.tour-card {
+    display: flex;
+    background: rgba(20, 20, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.03); 
+    border-radius: 20px;
+    padding: 28px;
+    gap: 36px;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.tours-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 45px; 
+}
+
+.tour-card:hover {
+    transform: translateY(-4px); 
+    background: rgba(26, 26, 32, 0.85);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.tour-image-wrapper {
+    width: 38%;
+    max-width: 380px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tour-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9) contrast(1.05);
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.tour-card:hover .tour-image {
+    transform: scale(1.02);
+    filter: brightness(1) contrast(1.05);
+}
+
+.tour-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tour-meta-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    font-family: 'Carter One', sans-serif;
+}
+
+.tour-name {
+    font-size: 1.9rem;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #ffffff;
+}
+
+.tour-date {
+    color: #646470;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tour-description {
+    color: #9ca3af;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.cities-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cities-label {
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.cities-list {
+    list-style: none !important;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cities-list li {
+    color: #9ca3af;
+    position: relative;
+    padding-left: 20px;
+    font-size: 1.05rem;
+}
+
+.cities-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.2rem;
+    top: -2px;
+}
+
+.cities-list li strong {
+    color: #ffffff;
+}
+
+.more-members-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px auto 0 auto;
+    background: rgba(20, 20, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    color: #9ca3af;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.toggle-btn:hover {
+    background: rgba(26, 26, 32, 0.85);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+details[open] .hidden-content {
+    order: 1;
+    margin-top: 28px;
+}
+
+details[open] .toggle-btn {
+    order: 2;
+    margin-top: 30px;
+}
+
+details[open] .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.btn-text-less { display: none; }
+details[open] .btn-text-more { display: none; }
+details[open] .btn-text-less { display: inline; }
+
+footer {
+    background-color: #121418;  
+    padding: 60px 5%;              
+    font-family: "Helvetica", sans-serif;
+    width: 100%;
+}
+
+.footer_holder {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;   
+    gap: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;           
+    gap: 12px;                                                
+    flex: 1;                                                  
+}
+
+.footer-column h2, .footer-column h3 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.footer-column p {
+    color: #999999;                    
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column a {
+    color: #cccccc;                  
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.contact-links p {
+    display: flex;
+    align-items: center;              
+    gap: 10px;
+    color: #cccccc;                  
+    font-size: 14px;
+}
+
+.contact-links p img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* --- Tablets & Small Laptops --- */
+@media screen and (max-width: 992px) {
+    header {
+        padding: 20px;
+    }
+
+    .banner {
+        height: 480px; /* Reduces huge banner image height slightly on tablets */
+    }
+
+    .title-text {
+        font-size: 2.4rem;
+    }
+
+    .tour-image-wrapper {
+        width: 42%; /* Slightly expands the image space to prevent text compression */
+    }
+
+    .tour-name {
+        font-size: 1.6rem;
+    }
+}
+
+/* --- Mobile Devices (Phones) --- */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .nav-list {
+        gap: 16px;
+    }
+
+    .banner {
+        height: 360px;
+    }
+
+    .tours-container {
+        margin: 40px auto 20px auto;
+    }
+
+    .title-text {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .tours-cards-wrapper {
+        gap: 30px; /* Reduces spacing slightly on mobile viewports */
+    }
+
+    /* Stacks tour image and details into a vertical block column */
+    .tour-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .tour-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tour-image {
+        aspect-ratio: 16 / 9; /* Standard widescreen crop on mobile layouts */
+    }
+
+    /* Formats title header metadata to snap downward vertically */
+    .tour-meta-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-bottom: 14px;
+        margin-bottom: 14px;
+    }
+
+    .tour-name {
+        font-size: 1.5rem;
+    }
+
+    /* Stacks the 3 footer columns vertically instead of horizontally */
+    .footer_holder {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .footer-column {
+        text-align: center;
+        align-items: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
