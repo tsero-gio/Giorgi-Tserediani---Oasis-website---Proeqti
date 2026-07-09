@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tour & News</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../images/oasis-logo.png"">
+        </div>
+
+        <div class="nav">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../biography/index.html">Biography</a></li>
+                <li><a href="../songs-albums/index.html">Songs & Albums</a></li>
+                <li><a href="../tour-news/index.html">Tours & News</a></li>
+                <li><a id="active">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="header-socials">
+            <a href="https://www.youtube.com/channel/UCUDVBtnOQi4c7E8jebpjc9Q" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+                <img src="../images/youtube-logo.png" class="social-icon">
+            </a>
+
+            <a href="https://www.instagram.com/oasis/?hl=en" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                <img src="../images/instagram-logo.png" class="social-icon">
+            </a>
+
+            <a href="https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4?si=7G612RI6SYKrchexe7ulkA" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Spotify">
+                <img src="../images/spotify-logo.png" class="social-icon">
+            </a>
+        </div>
+    </header>
+
+    
+    <div class="banner"></div>
+
+    <section class="contact-container">
+        <div class="horizontal-divider"></div>
+
+        <div class="contact-grid-layout">
+            
+            <div class="contact-left-col">
+                <div class="contact-pill">
+                    <svg class="pill-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    <span>Contact</span>
+                </div>
+                
+                <h2 class="contact-main-title">Get in touch</h2>
+                <p class="contact-lead-text">Have questions or ready to discuss everything about the band? Reach out to us directly.</p>
+                
+                <div class="contact-info-cards">
+                    <div class="info-strip-card">
+                        <div class="icon-box">
+                            <img src="https://img.icons8.com/ios-filled/50/FFFFFF/mail.png" alt="Email">
+                        </div>
+                        <div class="strip-details">
+                            <span class="strip-label">Email us</span>
+                            <span class="strip-value">info@gmail.com</span> 
+                        </div>
+                        <div class="arrow-box">
+                            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M5 19L19 5v12h2V3H7v2h12L5 19z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="info-strip-card">
+                        <div class="icon-box">
+                            <img src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" alt="Phone">
+                        </div>
+                        <div class="strip-details">
+                            <span class="strip-label">Call us</span>
+                            <span class="strip-value">+ 995 591111 999</span> 
+                        </div>
+                        <div class="arrow-box">
+                            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M5 19L19 5v12h2V3H7v2h12L5 19z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="info-strip-card">
+                        <div class="icon-box">
+                            <img src="https://img.icons8.com/ios-filled/50/FFFFFF/marker.png" alt="Address">
+                        </div>
+                        <div class="strip-details">
+                            <span class="strip-label">Our location</span>
+                            <span class="strip-value">Tbilisi, Georgia</span> 
+                        </div>
+                        <div class="arrow-box">
+                            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M5 19L19 5v12h2V3H7v2h12L5 19z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right-col">
+                <form class="image-style-form" onsubmit="event.preventDefault();">
+                    <div class="input-container-box">
+                        <label for="form-name">Name</label>
+                        <input type="text" id="form-name" placeholder="Liam Gallagher" required>
+                    </div>
+                    
+                    <div class="input-container-box">
+                        <label for="form-email">Email</label>
+                        <input type="email" id="form-email" placeholder="noel@gallagher.com" required>
+                    </div>
+                    
+                    <div class="input-container-box textarea-box">
+                        <label for="form-message">Message</label>
+                        <textarea id="form-message" rows="8" placeholder="Type your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="stark-submit-btn">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <br><br><br><br>
+
+    <footer>
+        <div class="footer_holder">
+    
+            <div class="footer-column brand-info">
+                <h2>Oasis</h2>
+                <p>This website is created for Oasis fans, or for people who just got into Oasis and want to learn more about the band. We here suggest songs and news related to the band.</p>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/channel/UCUDVBtnOQi4c7E8jebpjc9Q" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+                        <img src="../images/youtube-logo.png" class="social-icon" alt="YouTube">
+                    </a>
+                    <a href="https://www.instagram.com/oasis/?hl=en" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                        <img src="../images/instagram-logo.png" class="social-icon" alt="Instagram">
+                    </a>
+                    <a href="https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4?si=7G612RI6SYKrchexe7ulkA" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Spotify">
+                        <img src="../images/spotify-logo.png" class="social-icon" alt="Spotify">
+                    </a>
+                    <a href="https://tbcbank.ge/ka/tbc-education" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TBC Bank">
+                        <img src="../images/TBC-logo.png" class="social-icon" alt="TBC Bank">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Other Pages</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../biography/index.html">Biography</a></li>
+                    <li><a href="../songs-albums/index.html">Songs & Albums</a></li>
+                    <li><a href="../tour-news/index.html">Tour & News</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Other Links</h3>
+                <ul class="footer-links">
+                    <li><a href="https://en.wikipedia.org/wiki/Oasis_(band)" target="_blank" rel="noopener noreferrer">Wikipedia</a></li>
+                    <li><a href="https://x.com/oasis?lang=en" target="_blank" rel="noopener noreferrer">X</a></li>
+                    <li><a href="https://www.facebook.com/OasisOfficial/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://music.apple.com/ge/artist/oasis/512633" target="_blank" rel="noopener noreferrer">Apple Music</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-links">
+                <h3>Contact Info</h3>
+                <p><img src="https://img.icons8.com/ios-filled/50/FFFFFF/mail.png" alt="Email"> info@gmail.com</p>
+                <p><img src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" alt="Phone"> + 995 591111 999</p>
+                <p><img src="https://img.icons8.com/ios-filled/50/FFFFFF/marker.png" alt="Address"> Main str. Chicago Illinois</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>  
